@@ -10,6 +10,10 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
+    return {"Hello": "World",}
+
+@app.get("/verifyface")
+def verify_face():
     req = urllib.request.urlopen(
         'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2022%2F04%2F19%2Fcristiano-ronaldo-1.jpg&q=60')
     arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
