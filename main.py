@@ -1,10 +1,10 @@
 import cv2
 import face_recognition
-import io
 import urllib.request
 import numpy as np
-from typing import Union
+# from typing import Union
 from fastapi import FastAPI, File, UploadFile
+
 app = FastAPI()
 
 
