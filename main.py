@@ -11,7 +11,7 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     req = urllib.request.urlopen(
-        'https://assets.gqindia.com/photos/627cfe9f59a30320660c3e52/master/pass/Lionel%20Messi.jpeg')
+        'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2022%2F04%2F19%2Fcristiano-ronaldo-1.jpg&q=60')
     arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
     img = cv2.imdecode(arr, -1)  # 'Load it as it is'
 
@@ -20,7 +20,7 @@ def read_root():
     img_encoding = face_recognition.face_encodings(rgb_img)[0]
 
     req2 = urllib.request.urlopen(
-        'https://e0.365dm.com/21/05/2048x1152/skysports-lionel-messi-barcelona_5390329.jpg')
+        'https://i2-prod.mirror.co.uk/incoming/article26777809.ece/ALTERNATES/s1200c/0_GettyImages-1240041916-1.jpg')
     arr2 = np.asarray(bytearray(req2.read()), dtype=np.uint8)
     img2 = cv2.imdecode(arr2, -1)  # 'Load it as it is'
 
